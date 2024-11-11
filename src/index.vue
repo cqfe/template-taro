@@ -19,4 +19,3 @@ const onClick = () => {
   show.value = true
 }
 </script>
-<style module lang="scss"></style>
