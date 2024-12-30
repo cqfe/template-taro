@@ -38,7 +38,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.7.7",
-    "@cqfe/generate-api": "^0.11.13",
+    "@cqfe/generate-api": "^0.11.17",
     "@nutui/nutui-taro": "4.3.13",
     "@tarojs/components": "4.0.7",
     "@tarojs/helper": "4.0.7",
