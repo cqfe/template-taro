@@ -18,6 +18,7 @@ export default defineConfig(async (merge, { command, mode }) => {
       '@/services': path.resolve(__dirname, '..', 'src/services'),
     },
     sass: {
+      resource: [path.resolve(__dirname, '..', 'src/styles/variable.scss')],
       data: '@import "@nutui/nutui-taro/dist/styles/variables-jdt.scss";',
     },
     cache: {
