@@ -11,9 +11,6 @@ importers:
       '@babel/runtime':
         specifier: ^7.7.7
         version: 7.26.0
-      '@cqfe/generate-api':
-        specifier: ^0.11.13
-        version: 0.11.13(openapi-types@12.1.3)
       '@nutui/nutui-taro':
         specifier: 4.3.13
         version: 4.3.13(unplugin-vue-components@0.26.0(@babel/parser@7.26.2)(rollup@3.29.5)(vue@3.5.12(typescript@5.6.3))(webpack-sources@3.2.3))(vue@3.5.12(typescript@5.6.3))
@@ -87,6 +84,9 @@ importers:
       '@cqfe/eslint-config':
         specifier: ^1.3.3
         version: 1.3.7(@babel/core@7.26.0)(@types/eslint@9.6.1)
+      '@cqfe/generate-api':
+        specifier: ^0.11.19
+        version: 0.11.19(openapi-types@12.1.3)
       '@cqfe/prettier-config':
         specifier: ^1.3.4
         version: 1.3.9
@@ -774,8 +774,8 @@ packages:
   '@cqfe/eslint-config@1.3.7':
     resolution: {integrity: sha512-221dNwDcOyXnXrk8LW9GJAHQMaeEnfCjzMSw3mIBtmkkuRSfrsJzXXNr1MgLLaJ/4qna8pf1oewY+oXaHEIWWA==}
 
-  '@cqfe/generate-api@0.11.13':
-    resolution: {integrity: sha512-AkWXRO1YsRBLoGxGL2bHHIRdD57kUF5TA0+zxsImZdEEhB7PSdriopdKJtgvg3bHPcNt5qmAyT7HJx8IHRugXQ==}
+  '@cqfe/generate-api@0.11.19':
+    resolution: {integrity: sha512-d5z7YcEbKqW3ruTKwygT/BrqFrw2mkzoYyFxzd+AF2uFMtAynvOwPrvjsflooPlW/93ooM9MOIO+gXm6rb+IPw==}
 
   '@cqfe/prettier-config@1.3.9':
     resolution: {integrity: sha512-hSnE24GM+KlZGjUgbZo2kD6eKsGVzglZEs+8Sl8n/oC03jggeZx8RB8bapqxYoBTG0ImmMWPIQSS8l2saZXFPQ==}
@@ -1221,6 +1221,7 @@ packages:
 
   '@readme/json-schema-ref-parser@1.2.0':
     resolution: {integrity: sha512-Bt3QVovFSua4QmHa65EHUmh2xS0XJ3rgTEUPH998f4OW4VVJke3BuS16f+kM0ZLOGdvIrzrPRqwihuv5BAjtrA==}
+    deprecated: This package is no longer maintained. Please use `@apidevtools/json-schema-ref-parser` instead.
 
   '@readme/openapi-parser@2.6.0':
     resolution: {integrity: sha512-pyFJXezWj9WI1O+gdp95CoxfY+i+Uq3kKk4zXIFuRAZi9YnHpHOpjumWWr67wkmRTw19Hskh9spyY0Iyikf3fA==}
@@ -7583,7 +7584,7 @@ snapshots:
       '@vue/eslint-config-typescript': 12.0.0(eslint-plugin-vue@9.30.0(eslint@8.57.1))(eslint@8.57.1)(typescript@5.6.3)
       eslint: 8.57.1
       eslint-config-prettier: 9.1.0(eslint@8.41.0)
-      eslint-config-standard: 17.1.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.41.0)(typescript@5.6.3))(eslint@8.41.0))(eslint-plugin-n@16.6.2(eslint@8.41.0))(eslint-plugin-promise@6.6.0(eslint@8.41.0))(eslint@8.57.1)
+      eslint-config-standard: 17.1.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.41.0)(typescript@5.6.3))(eslint@8.57.1))(eslint-plugin-n@16.6.2(eslint@8.41.0))(eslint-plugin-promise@6.6.0(eslint@8.41.0))(eslint@8.57.1)
       eslint-config-standard-jsx: 11.0.0(eslint-plugin-react@7.37.2(eslint@8.41.0))(eslint@8.57.1)
       eslint-config-standard-react: 13.0.0(eslint-plugin-react-hooks@4.6.2(eslint@8.41.0))(eslint-plugin-react@7.37.2(eslint@8.41.0))(eslint@8.57.1)
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.41.0)(typescript@5.6.3))(eslint@8.57.1)
@@ -7603,7 +7604,7 @@ snapshots:
       - eslint-import-resolver-webpack
       - supports-color
 
-  '@cqfe/generate-api@0.11.13(openapi-types@12.1.3)':
+  '@cqfe/generate-api@0.11.19(openapi-types@12.1.3)':
     dependencies:
       '@readme/openapi-parser': 2.6.0(openapi-types@12.1.3)
       lodash: 4.17.21
@@ -10348,7 +10349,7 @@ snapshots:
       eslint-plugin-react: 7.37.2(eslint@8.57.1)
       eslint-plugin-react-hooks: 4.6.2(eslint@8.57.1)
 
-  eslint-config-standard@17.1.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.41.0)(typescript@5.6.3))(eslint@8.41.0))(eslint-plugin-n@16.6.2(eslint@8.41.0))(eslint-plugin-promise@6.6.0(eslint@8.41.0))(eslint@8.57.1):
+  eslint-config-standard@17.1.0(eslint-plugin-import@2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.41.0)(typescript@5.6.3))(eslint@8.57.1))(eslint-plugin-n@16.6.2(eslint@8.41.0))(eslint-plugin-promise@6.6.0(eslint@8.41.0))(eslint@8.57.1):
     dependencies:
       eslint: 8.57.1
       eslint-plugin-import: 2.31.0(@typescript-eslint/parser@6.21.0(eslint@8.41.0)(typescript@5.6.3))(eslint@8.57.1)
