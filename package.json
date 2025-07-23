@@ -80,12 +80,8 @@
     "unplugin-vue-components": "^0.26.0",
     "webpack": "^5.76.0"
   },
-  "prettier": "@cqfe/prettier-config",
   "stylelint": {
     "extends": "@cqfe/stylelint-config"
-  },
-  "eslintConfig": {
-    "extends": "@cqfe/eslint-config/lib/vue"
   },
   "lint-staged": {
     "*.{js,ts,vue,cjs,mjs}": [
