@@ -2,6 +2,8 @@
   "name": "template-taro",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@9.7.1",
+  "type": "module",
   "description": "tarojs + vuejs + nutui模版",
   "templateInfo": {
     "name": "vue3-NutUI",
@@ -26,7 +28,7 @@
     "dev:rn": "npm run build:rn -- --watch",
     "dev:qq": "npm run build:qq -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix",
+    "lint": "eslint '**/*.{js,jsx,ts,tsx,vue}' --fix",
     "prepare": "husky"
   },
   "browserslist": [
@@ -63,10 +65,9 @@
     "@babel/core": "^7.8.0",
     "@babel/plugin-proposal-class-properties": "^7.18.6",
     "@commitlint/config-conventional": "^19.2.2",
-    "@cqfe/eslint-config": "^1.3.8",
-    "@cqfe/prettier-config": "^1.3.10",
-    "@cqfe/stylelint-config": "^1.3.4",
-    "@cqfe/generate-api": "^0.11.19",
+    "@cqfe/eslint-config": "^2.0.6",
+    "@cqfe/prettier-config": "^2.0.1",
+    "@cqfe/stylelint-config": "^2.0.1",
     "@nutui/auto-import-resolver": "^1.0.0",
     "@tarojs/cli": "4.0.7",
     "@tarojs/webpack5-runner": "^4.1.2",
@@ -76,12 +77,10 @@
     "lint-staged": "^15.2.8",
     "postcss": "^8.4.18",
     "sass": "1.60.0",
+    "eslint": "^9.39.2",
     "terser": "^5.16.8",
     "unplugin-vue-components": "^0.26.0",
     "webpack": "^5.76.0"
-  },
-  "stylelint": {
-    "extends": "@cqfe/stylelint-config"
   },
   "lint-staged": {
     "*.{js,ts,vue,cjs,mjs}": [
