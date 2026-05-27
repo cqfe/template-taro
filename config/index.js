@@ -4,6 +4,7 @@ import prodConfig from './prod'
 import path from 'path'
 import NutUIResolver from '@nutui/auto-import-resolver'
 import ComponentsPlugin from 'unplugin-vue-components/webpack'
+import webpack from 'webpack'
 
 // https://taro-docs.jd.com/docs/next/config#defineconfig-辅助函数
 export default defineConfig(async (merge, { _command, _mode }) => {
@@ -100,6 +101,21 @@ export default defineConfig(async (merge, { _command, _mode }) => {
             resolvers: [NutUIResolver({ taro: true, importStyle: 'sass' })],
           }),
         )
+        // 1. 提供 process 全局变量（解决浏览器无 process）
+        chain.plugin('provide').use(webpack.ProvidePlugin, [
+          {
+            process: 'process',
+          },
+        ])
+
+        // 2. 定义环境变量（必须加，否则 process.env 依然报错）
+        chain.plugin('define').use(webpack.DefinePlugin, [
+          {
+            'process.env': JSON.stringify(process.env),
+            'process.env.TARO_ENV': JSON.stringify('h5'),
+            'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV),
+          },
+        ])
       },
     },
   }
