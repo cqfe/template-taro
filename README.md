@@ -22,6 +22,12 @@ npm run dev:h5
 npm run build
 ```
 
+## 版本注意事项
+
+- @tarojs/xxx 必须保证统一版本号
+- webpack：最高为@5.91.0，tarojs@4.20.0适配问题
+- sass：最高版本为@1.77.0，NutUI内部使用大量@import，高版本无法隐藏警告
+
 ## 部署环境信息
 
 | 环境      | 服务器地址   | 端口 | 访问域名             |

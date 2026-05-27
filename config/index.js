@@ -25,12 +25,10 @@ export default defineConfig(async (merge, { _command, _mode }) => {
       enable: true,
     },
     designWidth(input) {
-      // 配置 NutUI 375 尺寸
       if (input?.file?.replace(/\\+/g, '/').indexOf('@nutui') > -1) {
         return 375
       }
-      // 全局使用 Taro 默认的 750 尺寸
-      return 750
+      return 375
     },
     deviceRatio: {
       640: 2.34 / 2,
@@ -49,6 +47,9 @@ export default defineConfig(async (merge, { _command, _mode }) => {
     framework: 'vue3',
     compiler: {
       type: 'webpack5',
+      prebundle: {
+        enable: true,
+      },
     },
     mini: {
       postcss: {
@@ -57,9 +58,9 @@ export default defineConfig(async (merge, { _command, _mode }) => {
           config: {},
         },
         cssModules: {
-          enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
+          enable: true,
           config: {
-            namingPattern: 'module', // 转换模式，取值为 global/module
+            namingPattern: 'module',
             generateScopedName: '[name]__[local]___[hash:base64:5]',
           },
         },
@@ -86,9 +87,9 @@ export default defineConfig(async (merge, { _command, _mode }) => {
           config: {},
         },
         cssModules: {
-          enable: true, // 默认为 false，如需使用 css modules 功能，则设为 true
+          enable: true,
           config: {
-            namingPattern: 'module', // 转换模式，取值为 global/module
+            namingPattern: 'module',
             generateScopedName: '[name]__[local]___[hash:base64:5]',
           },
         },
@@ -103,9 +104,7 @@ export default defineConfig(async (merge, { _command, _mode }) => {
     },
   }
   if (process.env.NODE_ENV === 'development') {
-    // 本地开发构建配置（不混淆压缩）
     return merge({}, baseConfig, devConfig)
   }
-  // 生产构建配置（默认开启压缩混淆等）
   return merge({}, baseConfig, prodConfig)
 })
